@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center">Employee Screen</h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="mb-3 row">
+                        <label for="input-group-text" class="col-sm-3 col-form-label">Employee No</label>
+                        <div class="col-sm-6">
+                        <input type="number" class="form-control" id="employeeNo" [(ngModel)]="employee.employeeNo"
+                            name="employeeNo">
+                        </div>
+                        
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="input-group-text" class="col-sm-3 col-form-label">Employee Name</label>
+                        <div class="col-sm-6">
+                        <input type="text" class="form-control" id="employeeName" [(ngModel)]="employee.employeeName"
+                            name="employeeName">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="input-group-text" class="col-sm-3 col-form-label">Date Of Joining</label>
+                        <div class="col-sm-6">
+                        <input type="date" class="form-control" id="dateofJoining" [(ngModel)]="employee.dateofJoining"
+                            name="dateofJoining">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="input-group-text" class="col-sm-3 col-form-label" type="button" data-toggle="dropdown">Department</label>
+                        <div class="col-sm-6">
+                            <div class="dropdown">
+                              <select name="department" id="department" [(ngModel)]="employee.department">
+
+                                <option value="administration">AD</option>
+                                <option value="infirmation technology">IT</option>
+                                <option value="helpdesk">HD</option>
+                                <option value="humanresource">HR</option>
+                                <option value="operation">OP</option>
+                              </select>
+                              </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="input-group-text" class="col-sm-3 col-form-label">Salary</label>
+                        <div class="col-sm-6">
+                        <input type="number" class="form-control" id="salary" [(ngModel)]="employee.salary"
+                            name="salary" >
+                        </div>
+                    </div>
+
+                    <br />
+                    <button class="btn btn-success btn btn-primary me-md-2 col-sm-3" type="submit"  button id="Save" >Save</button>
+                    <button class="btn btn-success col-sm-3" type="reset" button id="reset" >Clear</button>
+                
+
+                </form>
+               
+            </div>
+        </div>
+    </div>
+</div>
